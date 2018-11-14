@@ -11,9 +11,14 @@ Trying to use nsl to do a reverse lookup with the in-addr.arpa domain failed as 
 ## Solution
 
 There is library in CRAN called iptools.
-You can get it using:
+For Linux and Mac users, you can get it using:
 
   > install.packages("iptools")
+  
+For Windows users, you will need to install the latest version from github with devtools. 
+The current CRAN version does not support DNS resolution, but this was recently added for Windows as well.
+
+  > devtools::install_github("hrbrmstr/iptools")
   
 Once you've installed the library, you can use the function:
   
